@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  luftballons99
+//  track3d
 //
-//  Created by Markus Sprunck on 22.10.16.
+//  Created by Markus Sprunck on 19.10.16.
 //  Copyright © 2016 Markus Sprunck. All rights reserved.
 //
 
@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -34,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        Thread.sleep(forTimeInterval: 2) // show launch screen longer than usual
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

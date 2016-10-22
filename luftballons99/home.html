@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <style type="text/css">
+            svg {
+                position: fixed;
+                height: 100%;
+                width: 100%
+            }
+        
+            div {
+                padding: 0px;
+            }
+        
+            html, body {
+                margin: 0px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <script type="text/javascript" src="main.js"></script>
+        
+        <!-- hier wird der Himmel gezeichnet -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+            <linearGradient id="g622" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop stop-color="#ffffff" offset="0"/>
+                <stop stop-color="#a5d2ff" offset="1"/>
+            </linearGradient>
+            <rect x="0" y="0" width="1" height="1" fill="url(#g622)" />
+        </svg>
+        
+        <!-- hier werden die Ballons gezeichnet -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+           
+            <g transform="translate(10, -200) scale(8)">
+               <path id="cloud1" class="cloud" clip-path="url(#SVGID_3_)" fill="#FFFFFF" d="M92.5,94.4c-15.8,0-56.5,0-69.9,0s-7.3-14.1,0-13.2c0,0-0.2-14.1,14.8-10.8c0,0,1.6-14.8,17.4-14.4s17.4,16.7,16,19.2c0,0,13.9-4.8,16.7,8.8c0,0,7.3-0.2,8.5,3.1C97.2,90.4,95.8,94.4,92.5,94.4z"/>
+          
+            </g>
+            
+            
+            <g transform="translate(10, -100) scale(3)">
+                <path id="cloud2" class="cloud" clip-path="url(#SVGID_3_)" fill="#FFFFFF" d="M92.5,94.4c-15.8,0-56.5,0-69.9,0s-7.3-14.1,0-13.2c0,0-0.2-14.1,14.8-10.8c0,0,1.6-14.8,17.4-14.4s17.4,16.7,16,19.2c0,0,13.9-4.8,16.7,8.8c0,0,7.3-0.2,8.5,3.1C97.2,90.4,95.8,94.4,92.5,94.4z"/>
+                
+            </g>
+            
+            <g transform="translate(550, 0) scale(2)">
+                <path id="cloud3" class="cloud" clip-path="url(#SVGID_3_)" fill="#FFFFFF" d="M92.5,94.4c-15.8,0-56.5,0-69.9,0s-7.3-14.1,0-13.2c0,0-0.2-14.1,14.8-10.8c0,0,1.6-14.8,17.4-14.4s17.4,16.7,16,19.2c0,0,13.9-4.8,16.7,8.8c0,0,7.3-0.2,8.5,3.1C97.2,90.4,95.8,94.4,92.5,94.4z"/>
+                
+            </g>
+ 
+ 
+            <circle id="C1" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-340" r="20" fill="yellow" />
+            <line id="L1" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+            
+            <circle id="C2" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-140" r="20" fill="purple" />
+            <line id="L2" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+            
+            <circle id="C3" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-210" r="16" fill="green" />
+            <line id="L3" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+            
+            <circle id="C4" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-540" r="30" fill="darkblue" />
+            <line id="L4" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+            
+            <circle id="C5" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-40" r="40" fill="red" />
+            <line id="L5" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+            
+        </svg>
+    </body>
+</html>
