@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2837DF291DBC10E2009F805F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2837DF2B1DBC10E2009F805F /* Main.storyboard */; };
 		288FBA001DBBC65E002EB565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288FB9F91DBBC65E002EB565 /* AppDelegate.swift */; };
 		288FBA011DBBC65E002EB565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FA1DBBC65E002EB565 /* Assets.xcassets */; };
 		288FBA031DBBC65E002EB565 /* home.html in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FC1DBBC65E002EB565 /* home.html */; };
 		288FBA041DBBC65E002EB565 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FD1DBBC65E002EB565 /* LaunchScreen.xib */; };
 		288FBA051DBBC65E002EB565 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FE1DBBC65E002EB565 /* main.js */; };
 		288FBA061DBBC65E002EB565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288FB9FF1DBBC65E002EB565 /* ViewController.swift */; };
-		288FBA0D1DBBC7E9002EB565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288FBA0C1DBBC7E9002EB565 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2837DF2A1DBC10E2009F805F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2837DF2E1DBC110B009F805F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		288FB9DE1DBBC602002EB565 /* luftballons99.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luftballons99.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288FB9F31DBBC602002EB565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288FB9F91DBBC65E002EB565 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +27,6 @@
 		288FB9FD1DBBC65E002EB565 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		288FB9FE1DBBC65E002EB565 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		288FB9FF1DBBC65E002EB565 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		288FBA0C1DBBC7E9002EB565 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +61,7 @@
 			children = (
 				288FB9F91DBBC65E002EB565 /* AppDelegate.swift */,
 				288FB9FA1DBBC65E002EB565 /* Assets.xcassets */,
-				288FBA0C1DBBC7E9002EB565 /* Main.storyboard */,
+				2837DF2B1DBC10E2009F805F /* Main.storyboard */,
 				288FB9FC1DBBC65E002EB565 /* home.html */,
 				288FB9FD1DBBC65E002EB565 /* LaunchScreen.xib */,
 				288FB9FE1DBBC65E002EB565 /* main.js */,
@@ -97,14 +98,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Markus Sprunck";
 				TargetAttributes = {
 					288FB9DD1DBBC602002EB565 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = L3966DJ8ZC;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -113,7 +114,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 288FB9D51DBBC602002EB565;
@@ -131,7 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				288FBA0D1DBBC7E9002EB565 /* Main.storyboard in Resources */,
+				2837DF291DBC10E2009F805F /* Main.storyboard in Resources */,
 				288FBA041DBBC65E002EB565 /* LaunchScreen.xib in Resources */,
 				288FBA031DBBC65E002EB565 /* home.html in Resources */,
 				288FBA011DBBC65E002EB565 /* Assets.xcassets in Resources */,
@@ -153,11 +153,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		2837DF2B1DBC10E2009F805F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2837DF2A1DBC10E2009F805F /* Base */,
+				2837DF2E1DBC110B009F805F /* de */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		288FB9F41DBBC602002EB565 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -172,6 +185,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -208,6 +222,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -222,6 +237,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -252,17 +268,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = L3966DJ8ZC;
 				INFOPLIST_FILE = luftballons99/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Luftballons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6a4f2e63-e2be-4375-b5c2-14fdaff08282";
-				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -271,16 +288,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = L3966DJ8ZC;
 				INFOPLIST_FILE = luftballons99/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Luftballons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6a4f2e63-e2be-4375-b5c2-14fdaff08282";
-				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -303,6 +321,7 @@
 				288FB9F81DBBC602002EB565 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
