@@ -52,20 +52,62 @@
             </g>
  
  
-            <circle id="C1" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-340" r="20" fill="yellow" />
+            <circle id="C1" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-340" r="20" style="fill:url(#yellowCircle)" />
             <line id="L1" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
             
-            <circle id="C2" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-140" r="20" fill="purple" />
+            <circle id="C2" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-140" r="20" style="fill:url(#purpleCircle)"/>
             <line id="L2" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
             
-            <circle id="C3" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-210" r="16" fill="green" />
+            <circle id="C3" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-210" r="16" style="fill:url(#greenCircle)" />
             <line id="L3" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
             
-            <circle id="C4" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-540" r="30" fill="darkblue" />
+            <circle id="C4" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-540" r="30" style="fill:url(#blueCircle)"  />
             <line id="L4" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
             
-            <circle id="C5" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-40" r="40" fill="red" />
+            <circle id="C5" ontouchstart="circle_click(evt)" opacity="0.8" cx="0" cy="-40" r="40" style="fill:url(#redCircle)" />
             <line id="L5" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+            
+            <defs>
+                <radialGradient id="redCircle"
+                    gradientUnits="objectBoundingBox" fx="30%" fy="30%">
+                    <stop offset="0%" style="stop-color:#FFFFFF" />
+                    <stop offset="40%" style="stop-color:#AA0000" />
+                    <stop offset="100%" style="stop-color:#660000" />
+                </radialGradient>
+            </defs>
+            <defs>
+                <radialGradient id="blueCircle"
+                    gradientUnits="objectBoundingBox" fx="30%" fy="30%">
+                    <stop offset="0%" style="stop-color:#FFFFFF" />
+                    <stop offset="40%" style="stop-color:#0000AA" />
+                    <stop offset="100%" style="stop-color:#000066" />
+                </radialGradient>
+            </defs>
+            <defs>
+                <radialGradient id="yellowCircle"
+                    gradientUnits="objectBoundingBox" fx="30%" fy="30%">
+                    <stop offset="0%" style="stop-color:#FFFFFF" />
+                    <stop offset="40%" style="stop-color:#AAAA00" />
+                    <stop offset="100%" style="stop-color:#666600" />
+                </radialGradient>
+            </defs>
+            <defs>
+                <radialGradient id="greenCircle"
+                    gradientUnits="objectBoundingBox" fx="30%" fy="30%">
+                    <stop offset="0%" style="stop-color:#FFFFFF" />
+                    <stop offset="40%" style="stop-color:#00AA00" />
+                    <stop offset="100%" style="stop-color:#006600" />
+                </radialGradient>
+            </defs>
+            <defs>
+                <radialGradient id="purpleCircle"
+                    gradientUnits="objectBoundingBox" fx="30%" fy="30%">
+                    <stop offset="0%" style="stop-color:#FFFFFF" />
+                    <stop offset="40%" style="stop-color:#AA00AA" />
+                    <stop offset="100%" style="stop-color:#660066" />
+                </radialGradient>
+            </defs>
+            
             
         </svg>
     </body>
