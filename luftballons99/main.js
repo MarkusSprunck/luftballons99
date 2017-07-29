@@ -17,13 +17,14 @@ function timerFunktion() {
     
     
     for (var nummer = 1; nummer <= ANZAHL_LUFTBALLONS_AM_ANFANG; nummer++) {
-      
+        
         istSpielFertig = MAXIMALE_ANZAHL_LUFTBALLONS <= anzahl_erzeugter_luftballons
         
         var kreis = document.getElementById("C" + nummer);
         var linie = document.getElementById("L" + nummer);
         
         var y_alt = parseInt(kreis.getAttribute("cy"));
+        var x_alt = parseInt(kreis.getAttribute("cx"));
         var r_alt = parseInt(kreis.getAttribute("r"));
         var schrittWeite = 3 + r_alt / 6;
         if (y_alt + r_alt * 5 > 0 && r_alt > 1) {
@@ -36,6 +37,12 @@ function timerFunktion() {
             kreis.setAttribute("cy", y_neu);
             linie.setAttribute("y1", y_neu + r_alt);
             linie.setAttribute("y2", y_neu + r_alt * 5);
+            
+            // Bewege den Luftballon und die Schnur ein Stück nach rechts
+            var x_neu = x_alt + schrittWeite / 10;
+            kreis.setAttribute("cx", x_neu);
+            linie.setAttribute("x1", x_neu );
+            linie.setAttribute("x2", x_neu );
             
         } else if (!istSpielFertig) {
             
@@ -61,10 +68,13 @@ function timerFunktion() {
     if (istSpielFertig) {
         clearInterval(timer);
         timer = false
+        // Schreibe das Ergebnis in die Titelzeile der App
+        updateLabel("Result: " + anzahl_gepatzte_luftballons + " of " + anzahl_erzeugter_luftballons + " balloons");
     }
- 
-    // Schreibe das Ergebnis in die Titelzeile der App
-    updateLabel("" + anzahl_gepatzte_luftballons + " von " + anzahl_erzeugter_luftballons + " Luftballons");
+    else {
+        // Schreibe das Zwischenergebnis in die Titelzeile der App
+        updateLabel("" + anzahl_gepatzte_luftballons + " of " + anzahl_erzeugter_luftballons + " balloons");
+    }
 }
 
 // Diese Funktion wird aufgerufen, wenn man auf einen Luftballon tippt
@@ -78,7 +88,7 @@ function circle_click(evt) {
         
         // setze den Radius auf Null, dass der Ballon unsichtbar wird
         circle.setAttribute("r", 0);
-       
+        
         // mach die Leine unsichtbar
         var nummer = circle.id[1];
         var linie = document.getElementById("L" + nummer);
@@ -107,7 +117,7 @@ function startGame() {
 
 // Wird von der App aufgerufen, wenn der Löschen Button gedrückt wurde
 function resetGame() {
-    updateLabel("Lass alle " + MAXIMALE_ANZAHL_LUFTBALLONS + " Luftballons platzen!")
+    updateLabel("Start and pop all the " + MAXIMALE_ANZAHL_LUFTBALLONS + " ballons!")
 }
 
 // Wird von der App aufgerufen, wenn der Pause Button gedrückt wurde
