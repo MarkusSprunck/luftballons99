@@ -57,6 +57,8 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     override func loadView() {
         super.loadView()
         
+        webViewPlaceholder.contentMode = .scaleAspectFit
+        
         let contentController = WKUserContentController();
         
         contentController.addUserScript(WKUserScript(
@@ -104,7 +106,6 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         webKitView!.load(requestObj as URLRequest);
         webKitView?.evaluateJavaScript("resetGame()")
         
-        
         playButton.isEnabled = true
         pauseButton.isEnabled = false
         resetButton.isEnabled = false
@@ -125,7 +126,9 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         return true
     }
     
-
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        webKitView?.frame = CGRect(x: 0, y: 45, width: self.view.frame.height, height: self.view.frame.width-90 )
+    }
 
 }
 

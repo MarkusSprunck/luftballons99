@@ -117,7 +117,7 @@ function startGame() {
 
 // Wird von der App aufgerufen, wenn der Löschen Button gedrückt wurde
 function resetGame() {
-    updateLabel("Start and pop all the " + MAXIMALE_ANZAHL_LUFTBALLONS + " ballons!")
+    updateLabel("Press start and pop all the " + MAXIMALE_ANZAHL_LUFTBALLONS + " ballons!")
 }
 
 // Wird von der App aufgerufen, wenn der Pause Button gedrückt wurde
