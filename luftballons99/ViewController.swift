@@ -119,6 +119,10 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         playButton.isEnabled = true
         pauseButton.isEnabled = false
         resetButton.isEnabled = false
+        
+        //Register for the applicationWillResignActive anywhere in your app.
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.applicationWillResignActive(notification:)), name: NSNotification.Name.UIApplicationWillResignActive, object: UIApplication.shared)
+
     }
 
     
@@ -138,6 +142,14 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         webKitView.frame = CGRect(x: 0, y: 45, width: self.view.frame.height, height: self.view.frame.width-90 )
+    }
+    
+    func applicationWillResignActive(notification: NSNotification) {
+        webKitView.evaluateJavaScript("stopGame()")
+        isRunning = false
+        playButton.isEnabled = true
+        pauseButton.isEnabled = false
+        resetButton.isEnabled = true
     }
    
 }
