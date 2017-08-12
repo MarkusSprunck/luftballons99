@@ -3,7 +3,7 @@
 //  track3d
 //
 //  Created by Markus Sprunck on 19.10.16.
-//  Copyright © 2016 Markus Sprunck. All rights reserved.
+//  Copyright © 2016-2017 Markus Sprunck. All rights reserved.
 //
 
 import UIKit
@@ -11,18 +11,15 @@ import SafariServices
 import WebKit
 
 class ViewController: UIViewController, WKScriptMessageHandler {
-  
     
     @IBOutlet weak var webViewPlaceholder: UIView!
-  
     @IBOutlet weak var statusLabel: UILabel!
-    
     @IBOutlet weak var playButton: UIBarButtonItem!
     @IBOutlet weak var pauseButton: UIBarButtonItem!
     @IBOutlet weak var resetButton: UIBarButtonItem!
     
     @IBAction func playButton(_ sender: AnyObject) {
-        webKitView?.evaluateJavaScript("startGame()")
+        webKitView.evaluateJavaScript("startGame()")
         isRunning = true
         playButton.isEnabled = false
         pauseButton.isEnabled = true
@@ -30,7 +27,7 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     }
 
     @IBAction func pauseButton(_ sender: AnyObject) {
-        webKitView?.evaluateJavaScript("stopGame()")
+        webKitView.evaluateJavaScript("stopGame()")
         isRunning = false
         playButton.isEnabled = true
         pauseButton.isEnabled = false
@@ -38,8 +35,8 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     }
     
     @IBAction func resetButton(_ sender: AnyObject) {
-        let _ = webKitView?.reload()
-        webKitView?.evaluateJavaScript("resetGame()")
+        let _ = webKitView.reload()
+        webKitView.evaluateJavaScript("resetGame()")
         isRunning = false
         playButton.isEnabled = true
         pauseButton.isEnabled = false
@@ -50,12 +47,13 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     
     private var isRunning = false
  
-    private var webKitView: WKWebView?
+    private var webKitView = WKWebView()
 
     @IBOutlet var containerView: UIView!
     
     override func loadView() {
         super.loadView()
+         self.view.addSubview(webKitView)
         
         webViewPlaceholder.contentMode = .scaleAspectFit
         
@@ -85,15 +83,27 @@ class ViewController: UIViewController, WKScriptMessageHandler {
             name: "callbackHandler"
         )
         
+        // Javascript that disables pinch-to-zoom by inserting the HTML viewport meta tag into <head>
+        let source: NSString = "var meta = document.createElement('meta');" +
+            "meta.name = 'viewport';" +
+            "meta.content = 'width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no';" +
+            "var head = document.getElementsByTagName('head')[0];" +
+            "head.appendChild(meta);" as NSString;
+        let script: WKUserScript = WKUserScript(source: source as String, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        // Create the user content controller and add the script to it
+        contentController.addUserScript(script)
+        
+  
         let config = WKWebViewConfiguration()
         config.userContentController = contentController
+        
         
         self.webKitView = WKWebView(
             frame: self.webViewPlaceholder.frame,
             configuration: config
         )
-       
-        self.view.addSubview(self.webKitView!)
+        
+        self.view.addSubview(self.webKitView)
     }
     
     override func viewDidLoad() {
@@ -103,8 +113,8 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         print("url=\(self.urlHome)")
         
         let requestObj = NSURLRequest(url: urlHome);
-        webKitView!.load(requestObj as URLRequest);
-        webKitView?.evaluateJavaScript("resetGame()")
+        webKitView.load(requestObj as URLRequest);
+        webKitView.evaluateJavaScript("resetGame()")
         
         playButton.isEnabled = true
         pauseButton.isEnabled = false
@@ -127,8 +137,8 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        webKitView?.frame = CGRect(x: 0, y: 45, width: self.view.frame.height, height: self.view.frame.width-90 )
+        webKitView.frame = CGRect(x: 0, y: 45, width: self.view.frame.height, height: self.view.frame.width-90 )
     }
-
+   
 }
 
