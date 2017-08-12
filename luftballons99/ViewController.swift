@@ -11,12 +11,19 @@ import SafariServices
 import WebKit
 
 class ViewController: UIViewController, WKScriptMessageHandler {
+
+    private var urlHome :URL!
     
-    @IBOutlet weak var webViewPlaceholder: UIView!
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var playButton: UIBarButtonItem!
-    @IBOutlet weak var pauseButton: UIBarButtonItem!
-    @IBOutlet weak var resetButton: UIBarButtonItem!
+    private var isRunning = false
+    
+    private var webKitView = WKWebView()
+    
+    @IBOutlet var containerView: UIView!
+    @IBOutlet var webViewPlaceholder: UIView!
+    @IBOutlet var statusLabel: UILabel!
+    @IBOutlet var playButton: UIBarButtonItem!
+    @IBOutlet var pauseButton: UIBarButtonItem!
+    @IBOutlet var resetButton: UIBarButtonItem!
     
     @IBAction func playButton(_ sender: AnyObject) {
         webKitView.evaluateJavaScript("startGame()")
@@ -25,13 +32,15 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         pauseButton.isEnabled = true
         resetButton.isEnabled = true
     }
-
+    
     @IBAction func pauseButton(_ sender: AnyObject) {
         webKitView.evaluateJavaScript("stopGame()")
         isRunning = false
         playButton.isEnabled = true
         pauseButton.isEnabled = false
         resetButton.isEnabled = true
+        
+        rotatePlayButton(view: playButton.customView!, animationTime: 0.7)
     }
     
     @IBAction func resetButton(_ sender: AnyObject) {
@@ -43,13 +52,6 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         resetButton.isEnabled = false
     }
    
-    private var urlHome :URL!
-    
-    private var isRunning = false
- 
-    private var webKitView = WKWebView()
-
-    @IBOutlet var containerView: UIView!
     
     override func loadView() {
         super.loadView()
@@ -104,6 +106,8 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         )
         
         self.view.addSubview(self.webKitView)
+        
+    
     }
     
     override func viewDidLoad() {
@@ -153,4 +157,3 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     }
    
 }
-
