@@ -39,8 +39,6 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         playButton.isEnabled = true
         pauseButton.isEnabled = false
         resetButton.isEnabled = true
-        
-        rotatePlayButton(view: playButton.customView!, animationTime: 0.7)
     }
     
     @IBAction func resetButton(_ sender: AnyObject) {
