@@ -153,5 +153,10 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         pauseButton.isEnabled = false
         resetButton.isEnabled = true
     }
-   
+    
+    override  open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+         get {
+            return UIInterfaceOrientationMask.portrait
+        }
+    }
 }
