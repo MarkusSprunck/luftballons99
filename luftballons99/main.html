@@ -1,6 +1,15 @@
+<!--
+ //
+ //  main.html
+ //
+ //  Created by Markus Sprunck on 19.10.2016
+ //  Copyright © 2016-2018 Markus Sprunck. All rights reserved.
+ //
+ -->
 <!doctype html>
 <html>
     <head>
+        <!-- zeichne alles im Vollbild-Modus -->
         <style type="text/css">
             svg {
                 position: fixed;
@@ -19,6 +28,7 @@
     
     <body >
         
+        <!-- laden der Spielsteuerung -->
         <script type="text/javascript" src="main.js"></script>
         
         <!-- hier wird der Himmel gezeichnet -->
@@ -30,14 +40,12 @@
             <rect x="0" y="0" width="1" height="1" fill="url(#g622)" />
         </svg>
         
-        <!-- hier werden die Ballons gezeichnet -->
         <svg  xmlns="http://www.w3.org/2000/svg">
-           
-            <g transform="translate(10, -200) scale(8)">
-               <path id="cloud1" class="cloud" clip-path="url(#SVGID_3_)"  style="fill:url(#cloudGradient)" d="M92.5,94.4c-15.8,0-56.5,0-69.9,0s-7.3-14.1,0-13.2c0,0-0.2-14.1,14.8-10.8c0,0,1.6-14.8,17.4-14.4s17.4,16.7,16,19.2c0,0,13.9-4.8,16.7,8.8c0,0,7.3-0.2,8.5,3.1C97.2,90.4,95.8,94.4,92.5,94.4z"/>
-          
-            </g>
             
+            <!-- hier werden die Wolken gezeichnet -->
+            <g transform="translate(10, -200) scale(8)">
+                <path id="cloud1" class="cloud" clip-path="url(#SVGID_3_)"  style="fill:url(#cloudGradient)" d="M92.5,94.4c-15.8,0-56.5,0-69.9,0s-7.3-14.1,0-13.2c0,0-0.2-14.1,14.8-10.8c0,0,1.6-14.8,17.4-14.4s17.4,16.7,16,19.2c0,0,13.9-4.8,16.7,8.8c0,0,7.3-0.2,8.5,3.1C97.2,90.4,95.8,94.4,92.5,94.4z"/>
+            </g>
             
             <g transform="translate(10, -100) scale(3)">
                 <path id="cloud2" class="cloud" clip-path="url(#SVGID_3_)"   style="fill:url(#cloudGradientLight)" d="M92.5,94.4c-15.8,0-56.5,0-69.9,0s-7.3-14.1,0-13.2c0,0-0.2-14.1,14.8-10.8c0,0,1.6-14.8,17.4-14.4s17.4,16.7,16,19.2c0,0,13.9-4.8,16.7,8.8c0,0,7.3-0.2,8.5,3.1C97.2,90.4,95.8,94.4,92.5,94.4z"/>
@@ -48,8 +56,8 @@
                 <path id="cloud3" class="cloud" clip-path="url(#SVGID_3_)"   style="fill:url(#cloudGradientLight)" d="M92.5,94.4c-15.8,0-56.5,0-69.9,0s-7.3-14.1,0-13.2c0,0-0.2-14.1,14.8-10.8c0,0,1.6-14.8,17.4-14.4s17.4,16.7,16,19.2c0,0,13.9-4.8,16.7,8.8c0,0,7.3-0.2,8.5,3.1C97.2,90.4,95.8,94.4,92.5,94.4z"/>
                 
             </g>
-  
- 
+            
+            <!-- hier werden die Ballons gezeichnet -->
             <circle id="C1" ontouchstart="circle_click(evt)" opacity="0.7" cx="0" cy="-340" r="20" style="fill:url(#yellowCircle)" />
             <line id="L1" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
             
@@ -65,6 +73,7 @@
             <circle id="C5" ontouchstart="circle_click(evt)" opacity="0.6" cx="0" cy="-40" r="40" style="fill:url(#redCircle)" />
             <line id="L5" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
             
+            <!-- hier werden die Farben für jeden Ballon und die Wolken definiert -->
             <defs>
                 <radialGradient id="redCircle"
                     gradientUnits="objectBoundingBox" fx="30%" fy="30%">
@@ -73,6 +82,7 @@
                     <stop offset="100%" style="stop-color:#660000" />
                 </radialGradient>
             </defs>
+            
             <defs>
                 <radialGradient id="blueCircle"
                     gradientUnits="objectBoundingBox" fx="30%" fy="30%">
@@ -81,6 +91,7 @@
                     <stop offset="100%" style="stop-color:#000066" />
                 </radialGradient>
             </defs>
+            
             <defs>
                 <radialGradient id="yellowCircle"
                     gradientUnits="objectBoundingBox" fx="30%" fy="30%">
@@ -89,6 +100,7 @@
                     <stop offset="100%" style="stop-color:#A8A800" />
                 </radialGradient>
             </defs>
+            
             <defs>
                 <radialGradient id="greenCircle"
                     gradientUnits="objectBoundingBox" fx="30%" fy="30%">
@@ -97,6 +109,7 @@
                     <stop offset="100%" style="stop-color:#006600" />
                 </radialGradient>
             </defs>
+            
             <defs>
                 <radialGradient id="purpleCircle"
                     gradientUnits="objectBoundingBox" fx="30%" fy="30%">
@@ -105,6 +118,7 @@
                     <stop offset="100%" style="stop-color:#660066" />
                 </radialGradient>
             </defs>
+            
             <defs>
                 <radialGradient id="cloudGradient"
                     gradientUnits="objectBoundingBox" fx="50%" fy="0%">
@@ -121,7 +135,6 @@
                     <stop offset="80%" style="stop-color:#FAFAFA" />
                 </radialGradient>
             </defs>
-            
             
         </svg>
     </body>

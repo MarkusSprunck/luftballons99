@@ -10,7 +10,7 @@
 		2837DF291DBC10E2009F805F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2837DF2B1DBC10E2009F805F /* Main.storyboard */; };
 		288FBA001DBBC65E002EB565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288FB9F91DBBC65E002EB565 /* AppDelegate.swift */; };
 		288FBA011DBBC65E002EB565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FA1DBBC65E002EB565 /* Assets.xcassets */; };
-		288FBA031DBBC65E002EB565 /* home.html in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FC1DBBC65E002EB565 /* home.html */; };
+		288FBA031DBBC65E002EB565 /* main.html in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FC1DBBC65E002EB565 /* main.html */; };
 		288FBA041DBBC65E002EB565 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FD1DBBC65E002EB565 /* LaunchScreen.xib */; };
 		288FBA051DBBC65E002EB565 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FE1DBBC65E002EB565 /* main.js */; };
 		288FBA061DBBC65E002EB565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288FB9FF1DBBC65E002EB565 /* ViewController.swift */; };
@@ -23,7 +23,7 @@
 		288FB9F31DBBC602002EB565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288FB9F91DBBC65E002EB565 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		288FB9FA1DBBC65E002EB565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		288FB9FC1DBBC65E002EB565 /* home.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = home.html; sourceTree = "<group>"; };
+		288FB9FC1DBBC65E002EB565 /* main.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = main.html; sourceTree = "<group>"; };
 		288FB9FD1DBBC65E002EB565 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		288FB9FE1DBBC65E002EB565 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		288FB9FF1DBBC65E002EB565 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,12 +60,12 @@
 			isa = PBXGroup;
 			children = (
 				288FB9F91DBBC65E002EB565 /* AppDelegate.swift */,
+				288FB9FF1DBBC65E002EB565 /* ViewController.swift */,
 				288FB9FA1DBBC65E002EB565 /* Assets.xcassets */,
 				2837DF2B1DBC10E2009F805F /* Main.storyboard */,
-				288FB9FC1DBBC65E002EB565 /* home.html */,
 				288FB9FD1DBBC65E002EB565 /* LaunchScreen.xib */,
+				288FB9FC1DBBC65E002EB565 /* main.html */,
 				288FB9FE1DBBC65E002EB565 /* main.js */,
-				288FB9FF1DBBC65E002EB565 /* ViewController.swift */,
 				288FB9F31DBBC602002EB565 /* Info.plist */,
 			);
 			path = luftballons99;
@@ -98,13 +98,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Markus Sprunck";
 				TargetAttributes = {
 					288FB9DD1DBBC602002EB565 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = L3966DJ8ZC;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -133,7 +133,7 @@
 			files = (
 				2837DF291DBC10E2009F805F /* Main.storyboard in Resources */,
 				288FBA041DBBC65E002EB565 /* LaunchScreen.xib in Resources */,
-				288FBA031DBBC65E002EB565 /* home.html in Resources */,
+				288FBA031DBBC65E002EB565 /* main.html in Resources */,
 				288FBA011DBBC65E002EB565 /* Assets.xcassets in Resources */,
 				288FBA051DBBC65E002EB565 /* main.js in Resources */,
 			);
@@ -176,7 +176,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -184,7 +186,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -228,7 +234,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -236,7 +244,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -278,7 +290,8 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -297,7 +310,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

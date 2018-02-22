@@ -1,6 +1,13 @@
+//
+//  main.js
+//
+//  Created by Markus Sprunck on 19.10.2016
+//  Copyright © 2016-2018 Markus Sprunck. All rights reserved.
+//
+
 // Konstanten (werden nicht verändert)
-var MAXIMALE_ANZAHL_LUFTBALLONS = 99;
-var ANZAHL_LUFTBALLONS_AM_ANFANG = 5;
+MAXIMALE_ANZAHL_LUFTBALLONS  = 99;
+ANZAHL_LUFTBALLONS = 5;
 
 // Zähler (werden beim Spielen verändert)
 var anzahl_gepatzte_luftballons = 0;
@@ -15,8 +22,7 @@ var istSpielFertig = false
 // Diese Funktion wird aufgerufen wenn der Timer "klingelt"
 function timerFunktion() {
     
-    
-    for (var nummer = 1; nummer <= ANZAHL_LUFTBALLONS_AM_ANFANG; nummer++) {
+    for (var nummer = 1; nummer <= ANZAHL_LUFTBALLONS; nummer++) {
         
         istSpielFertig = MAXIMALE_ANZAHL_LUFTBALLONS <= anzahl_erzeugter_luftballons
         
@@ -68,14 +74,15 @@ function timerFunktion() {
     if (istSpielFertig) {
         clearInterval(timer);
         timer = false
+        
         // Schreibe das Ergebnis in die Titelzeile der App
         updateLabel("Result: " + anzahl_gepatzte_luftballons + " of " + anzahl_erzeugter_luftballons + " balloons");
-    }
-    else {
+    } else {
         // Schreibe das Zwischenergebnis in die Titelzeile der App
         updateLabel("" + anzahl_gepatzte_luftballons + " of " + anzahl_erzeugter_luftballons + " balloons");
     }
 }
+
 
 // Diese Funktion wird aufgerufen, wenn man auf einen Luftballon tippt
 function circle_click(evt) {
@@ -97,31 +104,50 @@ function circle_click(evt) {
         
         // der Zähler für anzahl_gepatzte_luftballons wird um Eins erhöht
         anzahl_gepatzte_luftballons = anzahl_gepatzte_luftballons + 1;
+        
+        log("Ballon with id=" + circle.id + " popped")
     }
 }
+
 
 // Ruft in der App eine Funktion auf und schreibt die Titelzeile den übergebenen text
 function updateLabel(value) {
     try {
-        webkit.messageHandlers.callbackHandler.postMessage("" + value);
+        webkit.messageHandlers.callbackHandlerStatusLabel.postMessage("" + value);
     } catch (err) {
         console.log('ERROR: The native context does not exist yet');
     }
 }
 
+
 // Wird von der App aufgerufen, wenn der Play Button gedrückt wurde
 function startGame() {
     clearInterval(timer);
     timer = setInterval(timerFunktion, 50)
+    log("Game started")
 }
+
 
 // Wird von der App aufgerufen, wenn der Löschen Button gedrückt wurde
 function resetGame() {
-    updateLabel("Pop all the " + MAXIMALE_ANZAHL_LUFTBALLONS + " ballons")
+    updateLabel("Pop the " + MAXIMALE_ANZAHL_LUFTBALLONS + " ballons")
+    log("Game reset")
 }
+
 
 // Wird von der App aufgerufen, wenn der Pause Button gedrückt wurde
 function stopGame() {
     clearInterval(timer);
     timer = false
+    log("Game stop")
+}
+
+
+// Ruft in der App eine Funktion auf und schreibt den übergebenen text in die console
+function log(value) {
+    try {
+        webkit.messageHandlers.callbackHandlerLogging.postMessage("WEB " + value);
+    } catch (err) {
+        console.log('ERROR: The native context does not exist yet');
+    }
 }
