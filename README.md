@@ -1,10 +1,20 @@
-# luftballons99 (Hybrid iOS Swift App Demo)
+# luftballons99 (iOS game)
 
-Demo Anwendung für das P-Seminar am 06.03.2018 im Willi-Graf-Gymnasium, München. 
+This Swift application demonstrates a minimal hybrid iOS App. 
 
-Ziel dieser Anwendung ist, mit einem einfachen Spiel die Integration von Swift mit einer eingebetteten web-seite zu demonstrieren. 
+Code is based on: 
+- Swift 4, 
+- HTML (incl. SVG) and 
+- JavaScript.
 
-Based on: 
-- Swift 4
-- HTML & SVG
-- JavaScript in WebView
+It should answer the questions: 
+- How to setup WKWebView for interaction between native iOS code and JavaScript?
+- How to call JavaScript from Swift 4 code?
+- How to call Swift 4 code with parameters from JavaScript as JSON?
+- How to dynamically insert code into the HTML?
+- How to use basic internationalisation of strings for the user interface?
+
+You may find it here https://itunes.apple.com/developer/markus-sprunck/id1141912893?mt=8 in the AppStore.
+
+In the main.html and main.js you will read mainly German comments, because this code was written together with my son Korbinian when he was a fifth-grader. The game is based on his ideas.
+
