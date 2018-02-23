@@ -1,11 +1,10 @@
 # luftballons99 (iOS game)
 
-This Swift application demonstrates a minimal hybrid iOS App. 
+This small Swift 4 application demonstrates the fundamental concepts of hybrid iOS Apps. 
 
-Code is based on: 
-- Swift 4, 
-- HTML (incl. SVG) and 
-- JavaScript.
+The source code should serve as demo application in a seminar for advanced level of a high school students (Willi-Graf-Gymnasium, Munich). 
+
+For this purpose everything is reduced to an minimum complexity without loosing readability. It is essential to understand the fundamentals (before starting with frameworks like Xamarin, PhoneGap, Framework7, Mobile Angular UI or others)    
 
 It should answer the questions: 
 - How to setup WKWebView for interaction between native iOS code and JavaScript?
@@ -14,7 +13,13 @@ It should answer the questions:
 - How to dynamically insert code into the HTML?
 - How to use basic internationalisation of strings for the user interface?
 
-You may find it here https://itunes.apple.com/developer/markus-sprunck/id1141912893?mt=8 in the AppStore.
+Code is based on: 
+- Xcode 9 project, 
+- Swift 4, 
+- HTML (incl. SVG) and 
+- JavaScript.
+
+You may find the running application in the AppStore (https://itunes.apple.com/developer/markus-sprunck/id1141912893).
 
 In the main.html and main.js you will read mainly German comments, because this code was written together with my son Korbinian when he was a fifth-grader. The game is based on his ideas.
 
