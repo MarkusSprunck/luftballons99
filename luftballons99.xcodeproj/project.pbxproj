@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2837DF291DBC10E2009F805F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2837DF2B1DBC10E2009F805F /* Main.storyboard */; };
+		288CDB0E20401BC7000F542E /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 288CDB0B20401BC6000F542E /* de.lproj */; };
+		288CDB1020401BC7000F542E /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 288CDB0D20401BC7000F542E /* en.lproj */; };
+		288CDB1420402098000F542E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288CDB1320401FBC000F542E /* Main.storyboard */; };
 		288FBA001DBBC65E002EB565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288FB9F91DBBC65E002EB565 /* AppDelegate.swift */; };
 		288FBA011DBBC65E002EB565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FA1DBBC65E002EB565 /* Assets.xcassets */; };
 		288FBA031DBBC65E002EB565 /* main.html in Resources */ = {isa = PBXBuildFile; fileRef = 288FB9FC1DBBC65E002EB565 /* main.html */; };
@@ -17,8 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2837DF2A1DBC10E2009F805F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2837DF2E1DBC110B009F805F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		288CDB0B20401BC6000F542E /* de.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = de.lproj; sourceTree = "<group>"; };
+		288CDB0D20401BC7000F542E /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		288CDB1320401FBC000F542E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		288FB9DE1DBBC602002EB565 /* luftballons99.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luftballons99.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288FB9F31DBBC602002EB565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288FB9F91DBBC65E002EB565 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +62,12 @@
 		288FB9E01DBBC602002EB565 /* luftballons99 */ = {
 			isa = PBXGroup;
 			children = (
+				288CDB0B20401BC6000F542E /* de.lproj */,
+				288CDB0D20401BC7000F542E /* en.lproj */,
 				288FB9F91DBBC65E002EB565 /* AppDelegate.swift */,
 				288FB9FF1DBBC65E002EB565 /* ViewController.swift */,
 				288FB9FA1DBBC65E002EB565 /* Assets.xcassets */,
-				2837DF2B1DBC10E2009F805F /* Main.storyboard */,
+				288CDB1320401FBC000F542E /* Main.storyboard */,
 				288FB9FD1DBBC65E002EB565 /* LaunchScreen.xib */,
 				288FB9FC1DBBC65E002EB565 /* main.html */,
 				288FB9FE1DBBC65E002EB565 /* main.js */,
@@ -114,7 +119,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				Base,
+				en,
 			);
 			mainGroup = 288FB9D51DBBC602002EB565;
 			productRefGroup = 288FB9DF1DBBC602002EB565 /* Products */;
@@ -131,10 +136,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2837DF291DBC10E2009F805F /* Main.storyboard in Resources */,
+				288CDB1420402098000F542E /* Main.storyboard in Resources */,
+				288CDB1020401BC7000F542E /* en.lproj in Resources */,
 				288FBA041DBBC65E002EB565 /* LaunchScreen.xib in Resources */,
 				288FBA031DBBC65E002EB565 /* main.html in Resources */,
 				288FBA011DBBC65E002EB565 /* Assets.xcassets in Resources */,
+				288CDB0E20401BC7000F542E /* de.lproj in Resources */,
 				288FBA051DBBC65E002EB565 /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,18 +159,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2837DF2B1DBC10E2009F805F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2837DF2A1DBC10E2009F805F /* Base */,
-				2837DF2E1DBC110B009F805F /* de */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		288FB9F41DBBC602002EB565 /* Debug */ = {

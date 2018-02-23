@@ -75,12 +75,8 @@ function timerFunktion() {
         clearInterval(timer);
         timer = false
         
-        // Schreibe das Ergebnis in die Titelzeile der App
-        updateLabel("Result: " + anzahl_gepatzte_luftballons + " of " + anzahl_erzeugter_luftballons + " balloons");
-    } else {
-        // Schreibe das Zwischenergebnis in die Titelzeile der App
-        updateLabel("" + anzahl_gepatzte_luftballons + " of " + anzahl_erzeugter_luftballons + " balloons");
     }
+    updateLabel(anzahl_gepatzte_luftballons, anzahl_erzeugter_luftballons);
 }
 
 
@@ -110,10 +106,12 @@ function circle_click(evt) {
 }
 
 
-// Ruft in der App eine Funktion auf und schreibt die Titelzeile den übergebenen text
-function updateLabel(value) {
+// Ruft in der App eine Funktion auf und schreibt Werte für die Titelzeile
+function updateLabel(first, second) {
     try {
-        webkit.messageHandlers.callbackHandlerStatusLabel.postMessage("" + value);
+        webkit.messageHandlers.callbackHandlerStatusLabel.postMessage(
+            JSON.stringify({"first": first , "second": second })
+        );
     } catch (err) {
         console.log('ERROR: The native context does not exist yet');
     }
@@ -130,7 +128,7 @@ function startGame() {
 
 // Wird von der App aufgerufen, wenn der Löschen Button gedrückt wurde
 function resetGame() {
-    updateLabel("Pop the " + MAXIMALE_ANZAHL_LUFTBALLONS + " ballons")
+    updateLabel(0,  MAXIMALE_ANZAHL_LUFTBALLONS)
     log("Game reset")
 }
 

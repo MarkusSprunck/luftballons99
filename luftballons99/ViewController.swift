@@ -8,6 +8,7 @@
 import UIKit
 import SafariServices
 import WebKit
+import Foundation
 
 class ViewController: UIViewController, WKScriptMessageHandler {
     
@@ -160,16 +161,35 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         resetButton.isEnabled = true
     }
     
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
+
+    
     /**
      Called from JavaScript code in main.html
      */
     func userContentController(_ userContentController  : WKUserContentController,
                                  didReceive message     : WKScriptMessage) {
         
+        // Convert the JSON string from JavaScript to Swift dict and update label
         if message.name == "callbackHandlerStatusLabel" {
-            statusLabel.text = "\(message.body)"
+            if let dict = convertToDictionary(text: "\(message.body)") {
+                let text = String(format: NSLocalizedString("%@ of %@ ballons", comment: ""),
+                    "\(dict["first"] ?? "n.a.")",
+                    "\(dict["second"] ?? "n.a.")")
+                statusLabel.text = text
+            }
         }
         
+        // Logging of message from JavaScript
         if message.name == "callbackHandlerLogging" {
             print("callbackHandlerLogging -> \(message.body)")
         }
