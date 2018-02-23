@@ -1,4 +1,4 @@
-# 99 Luftballons (hybrid iOS game)
+# 99 Luftballons (iOS game)
 
 This small Swift 4 application demonstrates the fundamental concepts of hybrid iOS Apps. 
 
