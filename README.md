@@ -2,16 +2,16 @@
 
 This small Swift 4 application demonstrates the fundamental concepts of hybrid iOS Apps. 
 
-The source code should serve as demo application in a seminar for advanced level of a high school students (Willi-Graf-Gymnasium, Munich). 
+The source code serves as demo application in a seminar (advanced level of a high school) Willi-Graf-Gymnasium, Munich. 
 
-For this purpose everything is reduced to an minimum complexity without loosing readability. It is essential to understand the fundamentals (before starting with frameworks like Xamarin, PhoneGap, Framework7, Mobile Angular UI or others)    
+For this purpose everything is reduced to a minimal complexity. It is essential to understand the fundamentals (before starting with frameworks like Xamarin, PhoneGap, Framework7, Mobile Angular UI, etc.)    
 
-It should answer the questions: 
+It answers the questions: 
 - How to setup WKWebView for interaction between native iOS code and JavaScript?
 - How to call JavaScript from Swift 4 code?
-- How to call Swift 4 code with parameters from JavaScript as JSON?
+- How to call Swift 4 code from JavaScript with parameter in JSON text format?
 - How to dynamically insert code into the HTML?
-- How to use basic internationalisation of strings for the user interface?
+- How to use basic internationalisation for the user interface?
 
 Code is based on: 
 - Xcode 9 project, 
