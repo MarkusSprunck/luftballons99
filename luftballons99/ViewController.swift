@@ -71,8 +71,6 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         super.loadView()
         self.view.addSubview(webKitView)
         
-        webViewPlaceholder.contentMode = .scaleAspectFit
-        
         // Provides a way for JavaScript to post messages
         let contentController = WKUserContentController();
         contentController.addUserScript(WKUserScript(
@@ -204,13 +202,6 @@ class ViewController: UIViewController, WKScriptMessageHandler {
      */
     override var prefersStatusBarHidden: Bool {
         return true
-    }
-    
-    /**
-     Notifies the container that the size of its view is about to change.
-     */
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        webKitView.frame = CGRect(x: 0, y: 45, width: self.view.frame.height, height: self.view.frame.width-90 )
     }
     
     
