@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		282FFEC42047517F00E95ED0 /* introduction.key in Resources */ = {isa = PBXBuildFile; fileRef = 282FFEC22047517F00E95ED0 /* introduction.key */; };
+		282FFEC52047517F00E95ED0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 282FFEC32047517F00E95ED0 /* README.md */; };
 		288CDB0E20401BC7000F542E /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 288CDB0B20401BC6000F542E /* de.lproj */; };
 		288CDB1020401BC7000F542E /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 288CDB0D20401BC7000F542E /* en.lproj */; };
 		288CDB1420402098000F542E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288CDB1320401FBC000F542E /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		282FFEC22047517F00E95ED0 /* introduction.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = introduction.key; sourceTree = "<group>"; };
+		282FFEC32047517F00E95ED0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		288CDB0B20401BC6000F542E /* de.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = de.lproj; sourceTree = "<group>"; };
 		288CDB0D20401BC7000F542E /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		288CDB1320401FBC000F542E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +50,8 @@
 		288FB9D51DBBC602002EB565 = {
 			isa = PBXGroup;
 			children = (
+				282FFEC22047517F00E95ED0 /* introduction.key */,
+				282FFEC32047517F00E95ED0 /* README.md */,
 				288FB9E01DBBC602002EB565 /* luftballons99 */,
 				288FB9DF1DBBC602002EB565 /* Products */,
 			);
@@ -137,10 +143,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				288CDB1420402098000F542E /* Main.storyboard in Resources */,
+				282FFEC42047517F00E95ED0 /* introduction.key in Resources */,
 				288CDB1020401BC7000F542E /* en.lproj in Resources */,
 				288FBA041DBBC65E002EB565 /* LaunchScreen.xib in Resources */,
 				288FBA031DBBC65E002EB565 /* main.html in Resources */,
 				288FBA011DBBC65E002EB565 /* Assets.xcassets in Resources */,
+				282FFEC52047517F00E95ED0 /* README.md in Resources */,
 				288CDB0E20401BC7000F542E /* de.lproj in Resources */,
 				288FBA051DBBC65E002EB565 /* main.js in Resources */,
 			);
